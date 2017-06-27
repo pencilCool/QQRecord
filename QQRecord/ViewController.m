@@ -17,7 +17,13 @@
 @property (nonatomic, strong) AVAudioRecorder *audioRecorder;
 
 
-@property (nonatomic, strong) NSMutableArray *configArray;
+//@property (nonatomic, strong) NSMutableArray *configArray;
+@property (nonatomic, strong) NSArray *configArray;
+@property (weak) IBOutlet NSButton *startBT;
+@property (weak) IBOutlet NSButton *stopBT;
+@property (weak) IBOutlet NSTextField *TextLabel;
+@property (weak) IBOutlet NSTextField *recordNum;
+
 
 @end
 
@@ -32,11 +38,31 @@
     [super viewDidLoad];
     currentItemIndex = -1;
     // Do any additional setup after loading the view.
+    NSString *filePath = [NSString stringWithFormat:@"%@/con", [[NSBundle mainBundle] resourcePath]];
     
+    
+    NSArray *fileData;
+    NSError *error;
+    
+    //读取file文件并把内容根据换行符分割后赋值给NSArray
+    fileData = [[NSString stringWithContentsOfFile:filePath
+                                          encoding:NSUTF16StringEncoding
+                                             error:&error]
+                componentsSeparatedByString:@"\n"];
+    
+    NSLog(@"%lu", (unsigned long)fileData.count);
+    
+    //获取NSArray类型对象的迭代器
+    NSEnumerator *arrayEnumerator = [fileData objectEnumerator];
+    NSString *tempStr;
+    
+    while (tempStr = [arrayEnumerator nextObject]) {
+        NSLog(@"%@",tempStr);
+    }
     recordSetting = [NSDictionary dictionaryWithObjectsAndKeys:
                                    [NSNumber numberWithInt:AVAudioQualityLow],AVEncoderAudioQualityKey,
                                    [NSNumber numberWithInt:16],AVEncoderBitRateKey,
-                                   [NSNumber numberWithInt:2],AVNumberOfChannelsKey,
+                                   [NSNumber numberWithInt:1],AVNumberOfChannelsKey,
                                    [NSNumber numberWithFloat:44100.0],AVSampleRateKey,
                                    nil];
     
@@ -50,16 +76,16 @@
 
     // Update the view, if already loaded.
 }
+
 - (IBAction)start:(id)sender {
-    
-    
     if (self.audioRecorder.recording) return;
     currentItemIndex ++;
-    if (currentItemIndex == [self configArray].count - 1) {
+    if (currentItemIndex >= [self configArray].count) {
+        currentItemIndex --;
         return;
     } else {
-        
-        NSURL *url = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/%@.caf", [[NSBundle mainBundle] resourcePath],self.configArray[currentItemIndex]]];
+        self.TextLabel.stringValue = self.configArray[currentItemIndex];
+        NSURL *url = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/%@.wav", [[NSBundle mainBundle] resourcePath],self.configArray[currentItemIndex]]];
         
         NSError *error = nil;
         self.audioRecorder = [[ AVAudioRecorder alloc] initWithURL:url settings:recordSetting error:&error];
@@ -93,21 +119,18 @@
 
 
 
-// 在这里添加你们的配置选项，接下来会改成从外部导入文件的方法
-- (NSMutableArray *)configArray {
+
+- (NSArray *)configArray {
     
     if(_configArray == nil) {
-     _configArray = @[].mutableCopy;
-    [_configArray addObject:@"叮咚1"];
-    [_configArray addObject:@"叮咚2"];
-    [_configArray addObject:@"叮咚3"];
-    [_configArray addObject:@"叮咚4"];
-    
-    // .... 添加你的选项
+    self.recordNum.stringValue = @"80";
+        _configArray = @[].mutableCopy;
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"config" ofType:@"txt"];
+        NSString *configTxt  = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
+        _configArray = [configTxt componentsSeparatedByString:@"\r\n"];
     }
     
     return _configArray;
 }
-
 
 @end

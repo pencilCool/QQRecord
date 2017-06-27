@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B33BF6D61F02513B00281FEF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B33BF6D51F02513B00281FEF /* Main.storyboard */; };
+		B33BF6D91F02514E00281FEF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B33BF6D81F02514E00281FEF /* ViewController.m */; };
+		B33BF6DB1F02527600281FEF /* config.txt in Resources */ = {isa = PBXBuildFile; fileRef = B33BF6DA1F02527600281FEF /* config.txt */; };
 		B3A89F3A1EFD82D600D204D9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B3A89F391EFD82D600D204D9 /* AppDelegate.m */; };
 		B3A89F3D1EFD82D600D204D9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B3A89F3C1EFD82D600D204D9 /* main.m */; };
-		B3A89F401EFD82D600D204D9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3A89F3F1EFD82D600D204D9 /* ViewController.m */; };
 		B3A89F421EFD82D600D204D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3A89F411EFD82D600D204D9 /* Assets.xcassets */; };
-		B3A89F451EFD82D600D204D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3A89F431EFD82D600D204D9 /* Main.storyboard */; };
 		B3A89F501EFD82D600D204D9 /* QQRecordTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B3A89F4F1EFD82D600D204D9 /* QQRecordTests.m */; };
 		B3A89F5B1EFD82D600D204D9 /* QQRecordUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B3A89F5A1EFD82D600D204D9 /* QQRecordUITests.m */; };
 		B3A89F6A1EFD839800D204D9 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3A89F691EFD839800D204D9 /* AVFoundation.framework */; };
@@ -35,14 +36,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B33BF6D51F02513B00281FEF /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		B33BF6D71F02514E00281FEF /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		B33BF6D81F02514E00281FEF /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		B33BF6DA1F02527600281FEF /* config.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = config.txt; sourceTree = "<group>"; };
 		B3A89F351EFD82D600D204D9 /* QQRecord.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QQRecord.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3A89F381EFD82D600D204D9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B3A89F391EFD82D600D204D9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		B3A89F3C1EFD82D600D204D9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		B3A89F3E1EFD82D600D204D9 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		B3A89F3F1EFD82D600D204D9 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		B3A89F411EFD82D600D204D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		B3A89F441EFD82D600D204D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B3A89F461EFD82D600D204D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B3A89F4B1EFD82D600D204D9 /* QQRecordTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QQRecordTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3A89F4F1EFD82D600D204D9 /* QQRecordTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QQRecordTests.m; sourceTree = "<group>"; };
@@ -103,12 +105,13 @@
 		B3A89F371EFD82D600D204D9 /* QQRecord */ = {
 			isa = PBXGroup;
 			children = (
+				B33BF6DA1F02527600281FEF /* config.txt */,
 				B3A89F381EFD82D600D204D9 /* AppDelegate.h */,
 				B3A89F391EFD82D600D204D9 /* AppDelegate.m */,
-				B3A89F3E1EFD82D600D204D9 /* ViewController.h */,
-				B3A89F3F1EFD82D600D204D9 /* ViewController.m */,
+				B33BF6D71F02514E00281FEF /* ViewController.h */,
+				B33BF6D81F02514E00281FEF /* ViewController.m */,
+				B33BF6D51F02513B00281FEF /* Main.storyboard */,
 				B3A89F411EFD82D600D204D9 /* Assets.xcassets */,
-				B3A89F431EFD82D600D204D9 /* Main.storyboard */,
 				B3A89F461EFD82D600D204D9 /* Info.plist */,
 				B3A89F3B1EFD82D600D204D9 /* Supporting Files */,
 			);
@@ -255,8 +258,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B33BF6D61F02513B00281FEF /* Main.storyboard in Resources */,
 				B3A89F421EFD82D600D204D9 /* Assets.xcassets in Resources */,
-				B3A89F451EFD82D600D204D9 /* Main.storyboard in Resources */,
+				B33BF6DB1F02527600281FEF /* config.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,7 +285,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3A89F401EFD82D600D204D9 /* ViewController.m in Sources */,
+				B33BF6D91F02514E00281FEF /* ViewController.m in Sources */,
 				B3A89F3D1EFD82D600D204D9 /* main.m in Sources */,
 				B3A89F3A1EFD82D600D204D9 /* AppDelegate.m in Sources */,
 			);
@@ -317,17 +321,6 @@
 			targetProxy = B3A89F571EFD82D600D204D9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		B3A89F431EFD82D600D204D9 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B3A89F441EFD82D600D204D9 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		B3A89F5D1EFD82D600D204D9 /* Debug */ = {
@@ -512,6 +505,7 @@
 				B3A89F611EFD82D600D204D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B3A89F621EFD82D600D204D9 /* Build configuration list for PBXNativeTarget "QQRecordTests" */ = {
 			isa = XCConfigurationList;
@@ -520,6 +514,7 @@
 				B3A89F641EFD82D600D204D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B3A89F651EFD82D600D204D9 /* Build configuration list for PBXNativeTarget "QQRecordUITests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +523,7 @@
 				B3A89F671EFD82D600D204D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
